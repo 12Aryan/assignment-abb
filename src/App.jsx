@@ -1,9 +1,15 @@
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+]);
 
 const App = () => {
-  return  <div className="bg-blue-500 text-white p-4">
-  Tailwind is working!
-</div>
+  return <RouterProvider router={router} />;
 };
 
 export default App;
